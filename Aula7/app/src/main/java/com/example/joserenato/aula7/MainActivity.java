@@ -6,6 +6,8 @@ import android.view.View;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
+import java.io.BufferedReader;
+import java.io.FileReader;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -30,10 +32,19 @@ public class MainActivity extends AppCompatActivity {
                     arreizera.get(-1);
                     break;
                 case R.id.radioAri:
+                    double result;
+                    result = 10 / 0;
+                    break;
+                case R.id.radioIO:
+                    BufferedReader file = new BufferedReader(new FileReader("umaBelaPasta/arquivo"));
+                    break;
+                case R.id.radioNull:
+                    List<String> vazio = new ArrayList<>();
+                    vazio.size();
                     break;
             }
-        }catch (ArrayIndexOutOfBoundsException e){
-            Toast.makeText(this,R.string.trataErro, Toast.LENGTH_SHORT).show();
+        }catch (Exception e){
+            Toast.makeText(this,e.getMessage(), Toast.LENGTH_SHORT).show();
         }
     }
 }

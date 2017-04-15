@@ -9,12 +9,15 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.joserenato.aula7.MainActivity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:weightSum="1">
 
     <RadioGroup
         android:layout_width="match_parent"
         android:layout_height="137dp"
-        android:id="@+id/radioGroup">
+        android:id="@+id/radioGroup"
+        android:layout_weight="0.39">
+
         <RadioButton
             android:text="ArrayIndexOutExcpetion"
             android:layout_width="match_parent"
@@ -26,6 +29,20 @@
             android:layout_width="match_parent"
             android:layout_height="58dp"
             android:id="@+id/radioAri" />
+
+        <RadioButton
+            android:text="IOException"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/radioIO"
+            android:layout_weight="1" />
+
+        <RadioButton
+            android:text="NullPointerException"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/radioNull"
+            android:layout_weight="1" />
 
     </RadioGroup>
 
