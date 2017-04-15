@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TabHost
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:id="@+id/tabHost">
+
+    <TabWidget
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@android:id/tabs"
+        android:paddingTop="120px"/>
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@android:id/tabcontent"
+        android:paddingTop="120px">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/layout1"
+            android:paddingTop="200px">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="José Renato"
+                android:textSize="24sp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="juegregore28@gmail.com"
+                android:textSize="24sp"
+                android:layout_below="@+id/textView6"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="61dp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/layout2"
+            android:paddingTop="200px">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Qualidade e auditoria de software"
+                android:textSize="24sp"
+                android:id="@+id/t1"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Gerencia de projetos"
+                android:textSize="24sp"
+                android:id="@+id/t2"
+                android:layout_below="@+id/t1"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="5dp"
+                android:layout_marginTop="40dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Linguagem de Programação Orientadas a Objetos"
+                android:textSize="24sp"
+                android:id="@+id/t3"
+                android:layout_below="@+id/t2"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="5dp"
+                android:layout_marginTop="40dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="IA"
+                android:textSize="24sp"
+                android:id="@+id/t4"
+                android:layout_below="@+id/t3"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="5dp"
+                android:layout_marginTop="40dp"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Programação web"
+                android:textSize="24sp"
+                android:layout_below="@+id/t4"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="5dp"
+                android:layout_marginTop="40dp"/>
+        </RelativeLayout>
+
+    </FrameLayout>
+
+</TabHost>
