@@ -1,16 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_create_movie"
+    android:id="@+id/activity_movies_details"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.joserenato.trabalhog1.CreateMovie"
+    tools:context="com.example.joserenato.trabalhog1.MoviesDetails"
     android:background="@android:color/holo_blue_dark">
-
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Titulo"
+        android:textColor="@android:color/background_dark" />
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -24,8 +28,13 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:hint="Nome"
-        android:textColor="@android:color/black" />
-
+        android:textColor="@android:color/background_dark" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Descrição"
+        android:layout_below="@+id/movie_name"
+        android:textColor="@android:color/background_dark" />
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -39,23 +48,14 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
         android:hint="Descrição"
-        android:textColor="@android:color/black" />
+        android:textColor="@android:color/background_dark" />
 
-    <Button
-        android:text="Salvar"
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/movie_rate"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="39dp"
-        android:id="@+id/movie_save"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:onClick="save"
-        android:textColor="@android:color/background_dark"
-        android:background="@android:color/background_light" />
-
+        android:text="Nota"
+        android:layout_below="@+id/movie_description"
+        android:textColor="@android:color/background_dark" />
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -69,5 +69,31 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
         android:hint="Nota"
-        android:textColor="@android:color/black" />
+        android:textColor="@android:color/background_dark" />
+
+    <Button
+        android:text="Alterar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/movie_rate"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="78dp"
+        android:id="@+id/edit_movie_button"
+        android:elevation="1dp"
+        android:onClick="edit"
+        android:background="@android:color/holo_blue_light" />
+
+    <Button
+        android:text="Deletar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edit_movie_button"
+        android:layout_alignRight="@+id/edit_movie_button"
+        android:layout_alignEnd="@+id/edit_movie_button"
+        android:layout_marginTop="39dp"
+        android:id="@+id/remove_movie_button"
+        android:onClick="delete"
+        android:background="@android:color/holo_red_dark" />
+
 </RelativeLayout>

@@ -1,42 +1,53 @@
 package com.example.joserenato.trabalhog1;
 
 import android.content.ContentValues;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class CreateMovie extends AppCompatActivity {
 
+    public EditText movie_name;
+    public EditText movie_description;
+    public EditText movie_rate;
+
+    public Movies movie;
+    public static int id = 1;
+
+
+    ListMovies movies = new ListMovies();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create_movie);
 
-       Button create_btn = (Button)findViewById(R.id.movie_save);
+        movie_name = (EditText)findViewById(R.id.movie_name);
+        movie_description = (EditText)findViewById(R.id.movie_description);
+        movie_rate = (EditText)findViewById(R.id.movie_rate);
+    }
 
-        create_btn.setOnClickListener(new View.OnClickListener(){
+    public void save(View v) {
+        movie = new Movies();
 
-            @Override
-            public void onClick(View v) {
-                ControllerDb crud = new ControllerDb(getBaseContext());
+        movie.setId(this.id++);
+        movie.setTitle(movie_name.getText().toString());
+        movie.setDescription(movie_description.getText().toString());
+        movie.setRate(movie_rate.getText().toString());
+        movies.listMovies.add(movie);
 
-                EditText title = (EditText)findViewById(R.id.movie_name);
-                EditText description = (EditText)findViewById(R.id.movie_description);
-                EditText rate = (EditText)findViewById(R.id.movie_rate);
+        Toast.makeText(this, "Filme salvo com sucesso", Toast.LENGTH_SHORT).show();
 
-                String title_movie = title.getText().toString();
-                String description_movie = description.getText().toString();
-                String rate_movie = rate.getText().toString();
-                String result;
+        Intent intent;
+        intent = new Intent(this, ListMovies.class);
 
-                result = crud.Create(title_movie, description_movie, rate_movie);
-
-                Toast.makeText(getApplicationContext(), result, Toast.LENGTH_LONG).show();
-            }
-        });
-
+        startActivity(intent);
     }
 }
