@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="10dp"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="300px"
+            android:layout_height="300px"
+            android:id="@+id/img_news"
+            android:background="@color/colorAccent"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/title_news"
+            android:text="Texto"
+            android:textSize="28dp"
+            android:textColor="#000"
+            android:textColorHint="#000"
+            android:textStyle="bold|italic"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/rate_news"
+                android:text="Texto"
+                android:textColor="#000"
+                android:textColorHint="#000"
+                android:textSize="18dp"
+                android:layout_marginRight="132dp"
+                android:layout_marginEnd="132dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nota geral: "
+                android:textSize="18dp"
+                android:textColor="#000"
+                android:textColorHint="#000"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/rate_news"
+                android:layout_toStartOf="@+id/rate_news" />
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>
